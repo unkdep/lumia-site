@@ -76,14 +76,14 @@ function ChatDemo() {
 // ─── Features ────────────────────────────────────────────────────────────────
 
 const FEATURES = [
-  { title: "Atendimento integrado via WhatsApp", desc: "Todas as conversas da empresa centralizadas em um unico painel moderno." },
-  { title: "Multiplos numeros na mesma conta", desc: "Conecte varios WhatsApps e organize por setor, equipe ou departamento." },
-  { title: "Inteligencia Artificial integrada", desc: "A IA atende, responde e direciona clientes automaticamente, 24h por dia." },
-  { title: "Transferencia IA e atendente humano", desc: "A IA passa a conversa para o humano quando necessario e retoma depois." },
-  { title: "Disparo de mensagens e campanhas", desc: "Envie avisos, cobrancas e promocoes diretamente pelo WhatsApp." },
-  { title: "Fluxos e etapas automatizadas", desc: "Configure etapas de atendimento, captura de dados e respostas automaticas." },
-  { title: "Painel administrativo completo", desc: "Gerencie atendentes, numeros, campanhas, IA, fluxos e permissoes." },
-  { title: "API Oficial Meta integrada", desc: "Menor risco de bloqueio e conexao via estrutura oficial do WhatsApp Business." },
+  { title: "Atendimento integrado via WhatsApp", desc: "Todas as conversas da empresa centralizadas em um único painel moderno." },
+  { title: "Múltiplos números na mesma conta", desc: "Conecte vários WhatsApps e organize por setor, equipe ou departamento." },
+  { title: "Inteligência Artificial integrada", desc: "A IA atende, responde e direciona clientes automaticamente, 24h por dia." },
+  { title: "Transferência IA e atendente humano", desc: "A IA passa a conversa para o humano quando necessário e retoma depois." },
+  { title: "Disparo de mensagens e campanhas", desc: "Envie avisos, cobranças e promoções diretamente pelo WhatsApp." },
+  { title: "Fluxos e etapas automatizadas", desc: "Configure etapas de atendimento, captura de dados e respostas automáticas." },
+  { title: "Painel administrativo completo", desc: "Gerencie atendentes, números, campanhas, IA, fluxos e permissões." },
+  { title: "API Oficial Meta integrada", desc: "Menor risco de bloqueio e conexão via estrutura oficial do WhatsApp Business." },
 ];
 
 function FeatureCard({ f, i }: { f: { title: string; desc: string }; i: number }) {
@@ -134,27 +134,27 @@ function Showcase({ img, tag, title, desc, reverse = false }: { img: string; tag
 // ─── Plans ────────────────────────────────────────────────────────────────────
 
 const STARTER_YES = [
-  "1 numero de WhatsApp conectado",
-  "Ate 3 usuarios por empresa",
-  "Painel administrativo basico",
-  "Historico de conversas",
-  "Organizacao de contatos",
+  "1 número de WhatsApp conectado",
+  "Até 3 usuários por empresa",
+  "Painel administrativo básico",
+  "Histórico de conversas",
+  "Organização de contatos",
   "Sistema na nuvem (HTTPS + backup)",
 ];
 const STARTER_NO = [
   "API Oficial Meta",
-  "Inteligencia Artificial integrada",
+  "Inteligência Artificial integrada",
   "Disparos de mensagens",
   "Fluxos automatizados",
   "Etiquetas inteligentes",
 ];
 
 const PRO_YES = [
-  "Multiplos numeros de WhatsApp",
-  "Usuarios ilimitados",
-  "Inteligencia Artificial integrada",
-  "Transferencia IA / atendente humano",
-  "Reativacao automatica da IA",
+  "Múltiplos números de WhatsApp",
+  "Usuários ilimitados",
+  "Inteligência Artificial integrada",
+  "Transferência IA / atendente humano",
+  "Reativação automática da IA",
   "Disparos de mensagens e campanhas",
   "Fluxos e etapas automatizados",
   "Etiquetas inteligentes",
@@ -182,7 +182,7 @@ function MobileMenu({ open, onClose }: { open: boolean; onClose: () => void }) {
             <a href="#produto" onClick={onClose}>O Produto</a>
             <a href="#recursos" onClick={onClose}>Recursos</a>
             <a href="#planos" onClick={onClose}>Planos</a>
-            <a href={WA_LINK} target="_blank" className="mobile-cta" onClick={onClose}>Demonstracao gratis</a>
+            <a href={WA_LINK} target="_blank" className="mobile-cta" onClick={onClose}>Demonstração grátis</a>
           </nav>
         </motion.div>
       )}
@@ -207,9 +207,11 @@ export default function App() {
           <a href="#produto">O Produto</a>
           <a href="#recursos">Recursos</a>
           <a href="#planos">Planos</a>
-          <a href={WA_LINK} target="_blank" className="nav-btn">Demonstracao gratis</a>
         </nav>
-        <button className="hamburger" onClick={() => setMenuOpen(true)}><Menu size={22} /></button>
+        <div className="nav-right">
+          <a href={WA_LINK} target="_blank" className="nav-btn">Demonstração grátis</a>
+          <button className="hamburger" onClick={() => setMenuOpen(true)}><Menu size={22} /></button>
+        </div>
       </header>
 
       <MobileMenu open={menuOpen} onClose={() => setMenuOpen(false)} />
@@ -227,13 +229,13 @@ export default function App() {
         >
           <span className="hero-badge">Assistente virtual com IA para WhatsApp</span>
           <h1>
-            Atendimento automatico,<br />
+            Atendimento automático,<br />
             <em>inteligente</em> e organizado<br />
             via WhatsApp
           </h1>
           <p>
-            A Lumia centraliza conversas, conecta multiplos numeros, responde clientes
-            com inteligencia artificial e organiza todo o atendimento da sua empresa
+            A Lumia centraliza conversas, conecta múltiplos números, responde clientes
+            com inteligência artificial e organiza todo o atendimento da sua empresa
             em um painel moderno e completo.
           </p>
           <div className="hero-actions">
@@ -260,33 +262,33 @@ export default function App() {
 
       {/* PRODUCT SHOWCASES */}
       <section className="showcases" id="produto">
-        <div className="section-label">O que e a Lumia</div>
-        <h2 className="section-h2">Uma plataforma completa,<br />pensada para o seu negocio</h2>
+        <div className="section-label">O que é a Lumia</div>
+        <h2 className="section-h2">Uma plataforma completa,<br />pensada para o seu negócio</h2>
 
         <Showcase
           img={imgOnboard}
-          tag="Configuracao em minutos"
+          tag="Configuração em minutos"
           title="Cadastre, configure e ative tudo em poucos passos"
-          desc="O processo de onboarding e guiado: crie sua conta, configure a empresa, conecte o WhatsApp e ative a IA em uma sequencia simples e intuitiva. Nao e preciso ter conhecimento tecnico."
+          desc="O processo de onboarding é guiado: crie sua conta, configure a empresa, conecte o WhatsApp e ative a IA em uma sequência simples e intuitiva. Não é preciso ter conhecimento técnico."
         />
         <Showcase
           img={imgHome}
           tag="Painel central"
           title="Tudo o que acontece na empresa em uma tela"
-          desc="Acesse conversas, atendentes online, numeros conectados, filas de atendimento e indicadores do dia. Uma visao geral clara e em tempo real."
+          desc="Acesse conversas, atendentes online, números conectados, filas de atendimento e indicadores do dia. Uma visão geral clara e em tempo real."
           reverse
         />
         <Showcase
           img={imgDash}
           tag="Dashboard"
-          title="Dados e metricas para tomar decisoes melhores"
-          desc="Acompanhe volume de atendimentos, tempos de resposta, desempenho por atendente e muito mais. O dashboard foi projetado para ser objetivo e facil de interpretar."
+          title="Dados e métricas para tomar decisões melhores"
+          desc="Acompanhe volume de atendimentos, tempos de resposta, desempenho por atendente e muito mais. O dashboard foi projetado para ser objetivo e fácil de interpretar."
         />
         <Showcase
           img={imgChat}
           tag="Chat inteligente"
           title="A IA responde, transfere e retoma automaticamente"
-          desc="A IA atende o cliente, identifica o contexto, aplica etiquetas, captura dados e transfere para o humano quando necessario. Depois do atendimento humano, ela pode retomar o fluxo sozinha."
+          desc="A IA atende o cliente, identifica o contexto, aplica etiquetas, captura dados e transfere para o humano quando necessário. Depois do atendimento humano, ela retoma o fluxo sozinha."
           reverse
         />
       </section>
@@ -302,8 +304,8 @@ export default function App() {
 
       {/* PLANS */}
       <section className="plans" id="planos">
-        <div className="section-label">Planos e Precos</div>
-        <h2 className="section-h2">Escolha o plano ideal<br />para a sua operacao</h2>
+        <div className="section-label">Planos e Preços</div>
+        <h2 className="section-h2">Escolha o plano ideal<br />para a sua operação</h2>
         <p className="plans-sub">Sem taxas escondidas. Sem surpresas.</p>
 
         <div className="plans-grid">
@@ -311,11 +313,11 @@ export default function App() {
           <div className="plan-card">
             <div className="plan-name">Starter</div>
             <div className="plan-price">
-              <span>R$</span><strong>197</strong><small>/mes</small>
+              <span>R$</span><strong>197</strong><small>/mês</small>
             </div>
             <p className="plan-desc">
-              Para quem quer comecar a organizar o atendimento via WhatsApp sem complexidade.
-              Ideal para testar a plataforma com uma operacao pequena.
+              Para quem quer começar a organizar o atendimento via WhatsApp sem complexidade.
+              Ideal para testar a plataforma com uma operação pequena.
             </p>
             <hr className="plan-hr" />
             <ul>
@@ -326,7 +328,7 @@ export default function App() {
                 <li key={t} className="no"><XCircle size={15} />{t}</li>
               ))}
             </ul>
-            <a href={WA_LINK} target="_blank" className="plan-btn outline">Comecar agora</a>
+            <a href={WA_LINK} target="_blank" className="plan-btn outline">Começar agora</a>
           </div>
 
           {/* PRO */}
@@ -334,10 +336,10 @@ export default function App() {
             <div className="plan-badge">Recomendado</div>
             <div className="plan-name">Pro</div>
             <div className="plan-price">
-              <span>R$</span><strong>397</strong><small>/mes</small>
+              <span>R$</span><strong>397</strong><small>/mês</small>
             </div>
             <p className="plan-desc">
-              Para empresas que querem IA de verdade no WhatsApp, automacao completa,
+              Para empresas que querem IA de verdade no WhatsApp, automação completa,
               API Oficial Meta e um painel profissional para toda a equipe.
             </p>
             <hr className="plan-hr" />
@@ -346,7 +348,7 @@ export default function App() {
                 <li key={t}><CheckCircle2 size={15} className="yes" />{t}</li>
               ))}
             </ul>
-            <a href={WA_LINK} target="_blank" className="plan-btn solid">Solicitar demonstracao</a>
+            <a href={WA_LINK} target="_blank" className="plan-btn solid">Solicitar demonstração</a>
           </div>
         </div>
       </section>
@@ -355,7 +357,7 @@ export default function App() {
       <section className="cta-band">
         <div className="cta-glow" />
         <h2>Pronto para automatizar<br />o seu atendimento?</h2>
-        <p>Tenha IA, automacoes e organizacao completa em um unico sistema.</p>
+        <p>Tenha IA, automações e organização completa em um único sistema.</p>
         <a href={WA_LINK} target="_blank" className="btn-primary">
           Falar no WhatsApp <ArrowRight size={16} />
         </a>
@@ -396,26 +398,53 @@ export default function App() {
         /* ── NAV ── */
         .navbar {
           position: sticky; top: 0; z-index: 200;
-          display: flex; align-items: center; justify-content: space-between;
-          padding: 14px 40px;
-          background: rgba(6,9,18,0.82);
-          backdrop-filter: blur(20px);
-          border-bottom: 1px solid var(--border);
+          display: grid; grid-template-columns: 1fr auto 1fr;
+          align-items: center;
+          padding: 0 40px;
+          height: 80px;
+          background: rgba(6,9,18,0.75);
+          backdrop-filter: blur(24px);
+          border-bottom: 1px solid rgba(255,255,255,0.06);
         }
-        .brand { display: flex; align-items: center; gap: 10px; font-family: var(--font); font-weight: 800; font-size: 22px; }
-        .brand img { width: 42px; height: 42px; border-radius: 50%; object-fit: cover; }
+        .brand {
+          display: flex; align-items: center; gap: 12px;
+          font-family: var(--font); font-weight: 800; font-size: 20px;
+          justify-self: start;
+        }
+        .brand img {
+          width: 56px; height: 56px;
+          border-radius: 50%; object-fit: cover;
+          box-shadow: 0 0 0 2px rgba(42,255,200,0.25);
+        }
 
-        .nav-links { display: flex; align-items: center; gap: 6px; }
-        .nav-links a { padding: 9px 16px; border-radius: 999px; font-size: 14px; font-weight: 500; color: var(--muted); transition: color .2s, background .2s; }
-        .nav-links a:hover { color: #fff; background: rgba(255,255,255,0.06); }
+        .nav-links {
+          display: flex; align-items: center; gap: 2px;
+          justify-self: center;
+        }
+        .nav-links a {
+          padding: 8px 18px; border-radius: 999px;
+          font-size: 14px; font-weight: 500; color: rgba(255,255,255,0.6);
+          transition: color .2s, background .2s;
+          white-space: nowrap;
+        }
+        .nav-links a:hover { color: #fff; background: rgba(255,255,255,0.07); }
+
+        .nav-right {
+          justify-self: end;
+        }
         .nav-btn {
+          display: inline-flex; align-items: center;
+          padding: 10px 20px; border-radius: 999px;
           background: linear-gradient(135deg, var(--teal), var(--blue));
-          color: #030d18 !important; font-weight: 700 !important;
-          box-shadow: 0 0 28px rgba(42,255,200,0.18);
+          color: #030d18 !important; font-weight: 700; font-size: 14px;
+          font-family: var(--font);
+          box-shadow: 0 0 24px rgba(42,255,200,0.2);
+          transition: opacity .2s;
+          white-space: nowrap;
         }
-        .nav-btn:hover { opacity: .9; }
+        .nav-btn:hover { opacity: .88; }
 
-        .hamburger { display: none; background: none; border: none; color: var(--text); cursor: pointer; padding: 6px; }
+        .hamburger { display: none; background: none; border: none; color: var(--text); cursor: pointer; padding: 6px; justify-self: end; }
 
         /* ── MOBILE MENU ── */
         .mobile-menu {
@@ -686,8 +715,10 @@ export default function App() {
 
         @media (max-width: 860px) {
           .nav-links { display: none; }
+          .nav-btn { display: none; }
           .hamburger { display: grid; place-items: center; }
-          .navbar { padding: 12px 20px; }
+          .navbar { padding: 0 20px; grid-template-columns: 1fr auto; }
+          .nav-right { display: flex; align-items: center; }
 
           .hero {
             grid-template-columns: 1fr;
