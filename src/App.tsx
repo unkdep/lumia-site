@@ -29,12 +29,18 @@ const MSGS = [
 
 function ChatDemo() {
   const [visible, setVisible] = useState(1);
+  const bottomRef = useRef<HTMLDivElement>(null);
+
   useEffect(() => {
     const t = setInterval(() =>
       setVisible(v => (v >= MSGS.length ? 1 : v + 1)), 1900
     );
     return () => clearInterval(t);
   }, []);
+
+  useEffect(() => {
+    bottomRef.current?.scrollIntoView({ behavior: "smooth" });
+  }, [visible]);
 
   return (
     <div className="chat-card">
@@ -64,6 +70,7 @@ function ChatDemo() {
             </motion.div>
           ))}
         </AnimatePresence>
+        <div ref={bottomRef} />
       </div>
       <div className="chat-input">
         <span>Digite sua mensagem...</span>
@@ -541,7 +548,7 @@ export default function App() {
         .online { display: flex; align-items: center; gap: 5px; color: var(--teal); font-size: 12px; margin-top: 2px; }
         .online i { width: 6px; height: 6px; border-radius: 50%; background: var(--teal); box-shadow: 0 0 10px var(--teal); }
 
-        .chat-body { min-height: 230px; display: flex; flex-direction: column; gap: 10px; }
+        .chat-body { height: 230px; overflow-y: auto; display: flex; flex-direction: column; gap: 10px; scroll-behavior: smooth; }
         .bubble { max-width: 85%; }
         .bubble.user { align-self: flex-end; }
         .bubble.ai { align-self: flex-start; }
