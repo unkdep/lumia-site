@@ -29,12 +29,20 @@ const MSGS = [
 
 function ChatDemo() {
   const [visible, setVisible] = useState(1);
+  const bodyRef = useRef<HTMLDivElement>(null);
+
   useEffect(() => {
     const t = setInterval(() =>
       setVisible(v => (v >= MSGS.length ? 1 : v + 1)), 1900
     );
     return () => clearInterval(t);
   }, []);
+
+  useEffect(() => {
+    if (bodyRef.current) {
+      bodyRef.current.scrollTop = bodyRef.current.scrollHeight;
+    }
+  }, [visible]);
 
   return (
     <div className="chat-card">
@@ -45,7 +53,7 @@ function ChatDemo() {
           <span className="online"><i />Online agora</span>
         </div>
       </div>
-      <div className="chat-body">
+      <div className="chat-body" ref={bodyRef}>
         <AnimatePresence>
           {MSGS.slice(0, visible).map((m, i) => (
             <motion.div
@@ -541,7 +549,7 @@ export default function App() {
         .online { display: flex; align-items: center; gap: 5px; color: var(--teal); font-size: 12px; margin-top: 2px; }
         .online i { width: 6px; height: 6px; border-radius: 50%; background: var(--teal); box-shadow: 0 0 10px var(--teal); }
 
-        .chat-body { min-height: 230px; display: flex; flex-direction: column; gap: 10px; }
+        .chat-body { height: 230px; overflow-y: auto; overflow-x: hidden; display: flex; flex-direction: column; gap: 10px; scroll-behavior: smooth; }
         .bubble { max-width: 85%; }
         .bubble.user { align-self: flex-end; }
         .bubble.ai { align-self: flex-start; }
